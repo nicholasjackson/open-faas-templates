@@ -1,5 +1,5 @@
 # open-faas-templates-go-opencv
 GoCV OpenCV template for OpenFaaS
 
-## TODO
-Need to move building of base image for Alpine into a separate process, compiling OpenCV takes a while
+For an example function to use face detection with this template please see...   
+[https://github.com/nicholasjackson/open-faas-functions/blob/master/facedetect/handler.go](https://github.com/nicholasjackson/open-faas-functions/blob/master/facedetect/handler.go)
