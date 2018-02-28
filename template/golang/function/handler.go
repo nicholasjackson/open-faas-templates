@@ -1,10 +1,10 @@
 package function
 
 import (
-	"fmt"
+	"github.com/nicholasjackson/github.com/nicholasjackson/open-faas-templates/golang/types"
 )
 
 // Handle a serverless request
-func Handle(req []byte, ctx Context, resp Response) string {
-	return fmt.Sprintf("Hello, Go. You said: %s", string(req))
+func Handle(req []byte, ctx types.Context, resp types.Response) {
+	resp.Write(req, ctx)
 }

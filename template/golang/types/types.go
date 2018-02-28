@@ -1,4 +1,4 @@
-package function
+package types
 
 // Context contains information and values relating to the function context
 type Context struct {

@@ -8,6 +8,8 @@ import (
 	"time"
 
 	"handler/function"
+
+	"github.com/nicholasjackson/github.com/nicholasjackson/open-faas-templates/golang/types"
 )
 
 func makeRequestHandler() func(http.ResponseWriter, *http.Request) {
@@ -27,10 +29,10 @@ func makeRequestHandler() func(http.ResponseWriter, *http.Request) {
 			input = bodyBytes
 		}
 
-		result := function.Handle(input)
+		ctx := types.Context{}
+		resp := types.NewResponse(rw)
 
-		w.WriteHeader(http.StatusOK)
-		w.Write([]byte(result))
+		function.Handle(input, ctx, resp)
 	}
 }
 
