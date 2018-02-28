@@ -40,9 +40,9 @@ type Logger interface {
 	// Info writes a simple message to std out
 	Info(message string)
 	// Infof writes a formatted message to std out
-	Infof(format string, args interface{}...)
+	Infof(format string, args ...interface{})
 	// Error writes a simple messge to std err
 	Error(message string)
 	// Errorf writes a formatted message to std err
-	Errorf(format string, args interface{}...)
+	Errorf(format string, args ...interface{})
 }
